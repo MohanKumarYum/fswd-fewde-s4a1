@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Using Javascript in HTML page</title>
+    <script type="text/javascript">
+        function togglePara() {
+            //     <p>Hello this is a demo paragraph and javascript can change the content at any moment.</p>
+            var x = document.getElementById("myPara");
+            const text2 = 'Hi I am Javascript I can change the content at any time.';
+            if (x.innerHTML == text2)
+                x.innerHTML = 'Hello this is a demo paragraph and javascript can change the content at any moment.';
+            else
+                x.innerHTML = text2;
+        }
+    </script>
+</head>
+
+<body>
+    <p id="myPara">Hello this is a demo paragraph and javascript can change the content at any moment.</p>
+    <button type="button" onclick="togglePara()">Click me to change</button>
+</body>
+
+</html>
